@@ -2,7 +2,7 @@
 
 **Software bilingüe de conciliación logística para revisar evidencia de envíos y decisiones operativas.** Creado originalmente para América Latina, FleteOps reúne rutas, pruebas de entrega, diferencias de cantidad y decisiones de aprobación en un solo espacio.
 
-[English](../README.md) · [Arquitectura](ARCHITECTURE.md) · [Configuración conectada](CONNECTED-SETUP.md) · [Credenciales](CONFIGURATION.md)
+[Sitio web](https://fleteops.com) · [English](../README.md) · [Arquitectura](ARCHITECTURE.md) · [Configuración conectada](CONNECTED-SETUP.md) · [Credenciales](CONFIGURATION.md)
 
 La aplicación predeterminada es una **demo con datos totalmente ficticios**, disponible en inglés y español. No necesita cuenta, base de datos, clave de API ni sesión de mensajería. Los cambios viven solo en la memoria del navegador y se pierden al recargar. El repositorio también incluye código reutilizable para una aplicación conectada; configurarla requiere infraestructura propia y trabajo de integración adicional.
 
