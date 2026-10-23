@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Brand */
+  --color-ink: #011a62;
+  --color-ink-2: #0b2a75;
+  --color-muted: #3d5b8f;
+  --color-accent: #0d6ad1;
+  --color-accent-2: #48a2ff;
+  --color-accent-strong: #0a56aa;
+
+  /* Text on solid accent surfaces (buttons) */
+  --color-accent-contrast: #ffffff;
+
+  /* Grounds */
+  --color-card: #ffffff;
+  --color-surface: #eef4ff;
+  --color-surface-2: #dfe9ff;
+  --color-tint: #f8fbff;
+
+  /* Structure */
+  --color-line: #dbeafe;
+  --color-line-2: #eff6ff;
+
+  /* Sidebar (dark navy context) */
+  --color-nav: #011a62;
+  --color-nav-soft: #c8dbff;
+  --color-nav-strong: #082779;
+
+  /* Type */
+  --font-display: var(--font-geist), "Segoe UI", system-ui, sans-serif;
+  --font-body: var(--font-geist), "Segoe UI", system-ui, sans-serif;
+}
+
+:root {
+  --background: #eef4ff;
+  --foreground: #011a62;
+}
+
+/* Dark theme: token remap only — components never branch on mode.
+   Semantic palette shades used for state chips are re-anchored so tinted
+   grounds go deep and text tones go light. */
+.dark {
+  --background: #0b1224;
+  --foreground: #e7edfb;
+
+  --color-ink: #e7edfb;
+  --color-ink-2: #cbd8f2;
+  --color-muted: #9fadd2;
+  --color-accent: #6ea8ff;
+  --color-accent-2: #48a2ff;
+  --color-accent-strong: #8cbcff;
+  --color-accent-contrast: #071a3f;
+
+  --color-card: #101a30;
+  --color-surface: #16213a;
+  --color-surface-2: #1d2b4a;
+  --color-tint: #131d34;
+  --color-line: #24314f;
+  --color-line-2: #1c2740;
+
+  --color-blue-50: #152238;
+  --color-blue-100: #1d2c47;
+  --color-blue-200: #28395c;
+
+  --color-amber-50: #372a10;
+  --color-amber-100: #453413;
+  --color-amber-200: #5c4720;
+  --color-amber-300: #6d5527;
+  --color-amber-600: #e3a24d;
+  --color-amber-700: #eab365;
+  --color-amber-800: #f0c584;
+  --color-amber-900: #f6d8a9;
+
+  --color-rose-50: #3d1522;
+  --color-rose-100: #4a1a2b;
+  --color-rose-200: #61233a;
+  --color-rose-300: #7a2c49;
+  --color-rose-600: #f27795;
+  --color-rose-700: #f58ba5;
+  --color-rose-800: #f8a3b8;
+  --color-rose-900: #fbc0cf;
+
+  --color-emerald-50: #0f2f26;
+  --color-emerald-100: #143b30;
+  --color-emerald-200: #1d4f40;
+  --color-emerald-300: #276650;
+  --color-emerald-600: #43cf9c;
+  --color-emerald-700: #5adfae;
+  --color-emerald-800: #7fe9c3;
+  --color-emerald-900: #a5f0d5;
+  --color-emerald-950: #c8f7e5;
+
+  --color-sky-50: #122c3f;
+  --color-sky-100: #173950;
+  --color-sky-200: #215070;
+  --color-sky-600: #6cc2f5;
+  --color-sky-700: #8cd0f8;
+
+  --color-orange-50: #38230f;
+  --color-orange-100: #472c12;
+  --color-orange-200: #5e3a18;
+  --color-orange-300: #6e4720;
+  --color-orange-700: #f0a468;
+
+  --color-slate-50: #1a2334;
+  --color-slate-100: #222d42;
+  --color-slate-200: #2e3b55;
+  --color-slate-300: #3c4a67;
+  --color-slate-600: #a8b5cd;
+}
+
+/* Base styles live in the base layer so Tailwind utilities always win.
+   Unlayered rules silently override utilities on matching elements
+   (e.g. `a { color: inherit }` beating `text-white` on every Link). */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    margin: 0;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body), sans-serif;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background: rgba(13, 106, 209, 0.2);
+  }
+}
+
+@layer utilities {
+  .subtle-scrollbar {
+    scrollbar-color: rgba(100, 116, 139, 0.28) transparent;
+    scrollbar-width: thin;
+  }
+
+  .subtle-scrollbar::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+
+  .subtle-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(100, 116, 139, 0.28);
+    border-radius: 999px;
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "fleteops",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack --hostname 127.0.0.1",
+    "test": "node --test --import tsx $(find src -name '*.test.ts' -print) $(find src -name '*.test.tsx' -print) $(find scripts -name '*.test.mjs' -print)",
+    "build": "next build --webpack",
+    "start": "next start --hostname 127.0.0.1",
+    "lint": "eslint .",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "test:demo": "playwright test",
+    "typecheck": "tsc --noEmit",
+    "privacy:check": "node scripts/check-public-files.mjs",
+    "notices:generate": "node scripts/generate-dependency-notices.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "3.1034.0",
+    "@aws-sdk/s3-request-presigner": "3.1034.0",
+    "@supabase/ssr": "0.10.2",
+    "@supabase/supabase-js": "2.103.0",
+    "clsx": "2.1.1",
+    "drizzle-orm": "0.45.2",
+    "inngest": "4.26.0",
+    "lucide-react": "1.7.0",
+    "next": "16.4.3",
+    "postal-mime": "2.7.4",
+    "postgres": "3.4.9",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "svix": "1.99.1",
+    "tailwind-merge": "3.5.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
+    "zod": "4.6.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "@tailwindcss/postcss": "4.2.2",
+    "@types/node": "25.5.2",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "drizzle-kit": "0.31.10",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.4.3",
+    "tailwindcss": "4.2.2",
+    "tsx": "4.21.0",
+    "typescript": "6.0.2"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.23.4 <23"
+  },
+  "overrides": {
+    "inngest": {
+      "zod": "$zod",
+      "@opentelemetry/auto-instrumentations-node": "0.81.0",
+      "@opentelemetry/api": "1.9.1"
+    },
+    "@esbuild-kit/core-utils": {
+      "esbuild": "0.25.12"
+    },
+    "tsx": {
+      "esbuild": "0.27.2"
+    }
+  }
+}

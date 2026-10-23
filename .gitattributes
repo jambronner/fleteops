@@ -1,0 +1,2 @@
+# Preserve verbatim upstream license whitespace; do not treat it as source lint.
+THIRD_PARTY_LICENSES.txt -whitespace
