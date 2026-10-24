@@ -25,7 +25,7 @@ export default async function NoWorkspaceAccessPage() {
   return (
     <main className="flex min-h-[calc(100vh-3rem)] items-center justify-center px-4 py-8">
       <section className="w-full max-w-[460px] rounded-[2rem] border border-surface-2 bg-card px-6 py-7 text-center shadow-[0_24px_80px_rgba(1,26,98,0.12)] sm:px-8">
-        <Image alt="FleteOps AI" className="mx-auto h-9 w-auto object-contain" height={121} priority src="/logo.svg" width={437} />
+        <Image alt="FleteOps" className="mx-auto h-9 w-auto object-contain" height={121} priority src="/logo.svg" width={437} />
         <h1 className="mt-5 font-display text-3xl font-bold text-ink">{copy.title}</h1>
         <p className="mt-3 text-sm leading-6 text-muted">{copy.body}</p>
         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
