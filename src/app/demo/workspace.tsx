@@ -4,6 +4,7 @@ import { dictionaries } from "@/lib/demo/dictionaries";
 import { initialState, canApprove, importCsv, sampleCsv, setSourceStatus, simulateIntake, reviewEvidence, decide, type Locale, type DemoEvent } from "@/lib/demo/model";
 import { evaluateShipmentPacket } from "@/lib/reconciliation/engine";
 import type { ShipmentPacket } from "@/lib/reconciliation/types";
+import { FleteOpsMark } from "./fleteops-mark";
 import s from "./workspace.module.css";
 
 export default function DemoWorkspace() {
@@ -30,7 +31,7 @@ export default function DemoWorkspace() {
   function reset() { if (window.confirm(t.resetConfirm)) { setState(initialState()); setSelected("demo-route-1"); setTab("routes"); setNotice(t.resetEvent); setMobileDetail(false); } }
   return <div className={s.shell}>
     <aside className={s.sidebar}>
-      <a className={s.brand} href="/demo" aria-label="FleteOps"><span className={s.mark}>F</span>FleteOps</a>
+      <a className={s.brand} href="/demo" aria-label="FleteOps"><FleteOpsMark className={s.mark} />FleteOps</a>
       <span className={s.demoTag}>{t.demo}</span>
       <nav aria-label={t.title} className={s.nav}>{(["routes", "sources", "activity"] as const).map((name, i) => <button key={name} aria-current={tab === name ? "page" : undefined} onClick={() => {setTab(name); setMobileDetail(false);}}><span aria-hidden="true">{["▤", "◎", "↗"][i]}</span>{t[name]}</button>)}</nav>
       <div className={s.sideBottom}><p>{t.origin}</p><button onClick={() => about.current?.showModal()}>{t.about} ↗</button></div>

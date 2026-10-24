@@ -19,4 +19,8 @@ Choose and pin an independently reviewed service version/image digest for your d
 - `caniuse-lite` data is CC BY 4.0; retain the attribution/license information accompanying it. Other small dependencies declare BlueOak, Python, CC0, Unlicense and other terms recorded in the inventory.
 - Supabase, PostgreSQL, object storage, email, AI providers, Inngest, Docling and any malware gateway are separately operated services/software. Check their chosen versions, licenses, account terms, data-processing obligations and costs before enabling them. The credential-free demo requires none of them.
 
+## Brand artwork
+
+`public/logo.svg` and `public/logo-white.svg` contain the "FleteOps" wordmark as glyph outlines made with Inter Display Bold Italic 4.001, Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter), licensed under the [SIL Open Font License 1.1](https://openfontlicense.org). No font files are included.
+
 The inventory is a maintenance aid, not a legal opinion. Recheck upstream licensing and advisories for each release and any changed distribution form. Original author attribution is retained through the Jamaur Bronner and FleteOps contributors copyright; no customer name or endorsement is implied.

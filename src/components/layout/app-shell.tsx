@@ -49,7 +49,7 @@ export function AppShell({
               className="h-7 w-auto dark:hidden"
             />
             <Image
-              src="/logo.svg"
+              src="/logo-white.svg"
               alt={dictionary.appName}
               width={437}
               height={121}
