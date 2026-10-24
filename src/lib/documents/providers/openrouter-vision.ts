@@ -158,7 +158,7 @@ async function requestOpenRouterExtraction(args: {
       Authorization: `Bearer ${openRouterApiKey}`,
       "Content-Type": "application/json",
       ...(appUrl ? { "HTTP-Referer": appUrl } : {}),
-      "X-Title": "FleteOps AI",
+      "X-Title": "FleteOps",
     },
     body: JSON.stringify({
       model,

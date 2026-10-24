@@ -1,5 +1,5 @@
 export const esMxDictionary = {
-  appName: "FleteOps AI",
+  appName: "FleteOps",
   nav: {
     home: "Dashboard",
     partners: "Directorio",

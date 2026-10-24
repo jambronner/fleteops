@@ -554,7 +554,7 @@ export const heuristicIntakeClassifier: IntakeClassifierProvider = {
 
 function buildClassifierPrompt(args: IntakeClassificationInput) {
   return [
-    "Classify this inbound logistics message for FleteOps AI.",
+    "Classify this inbound logistics message for FleteOps.",
     `Locale: ${args.locale}.`,
     "Return exactly one classification:",
     "- route_request: a customer/operator is asking for a pickup, delivery, route, truck, or operational movement to be created or changed.",
@@ -599,7 +599,7 @@ export const openRouterIntakeClassifier: IntakeClassifierProvider = {
         Authorization: `Bearer ${openRouterApiKey}`,
         "Content-Type": "application/json",
         ...(appUrl ? { "HTTP-Referer": appUrl } : {}),
-        "X-Title": "FleteOps AI",
+        "X-Title": "FleteOps",
       },
       body: JSON.stringify({
         model: getOpenRouterVisionModel(),
