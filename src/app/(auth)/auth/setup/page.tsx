@@ -21,7 +21,7 @@ export default async function AuthSetupPage() {
     <main className="flex min-h-[calc(100vh-3rem)] items-center justify-center px-4 py-8">
       <section className="w-full max-w-[460px] rounded-[2rem] border border-surface-2 bg-card px-6 py-7 shadow-[0_24px_80px_rgba(1,26,98,0.12)] sm:px-8">
         <div className="flex justify-center">
-          <Image alt="FleteOps AI" className="h-9 w-auto object-contain" height={121} priority src="/logo.svg" width={437} />
+          <Image alt="FleteOps" className="h-9 w-auto object-contain" height={121} priority src="/logo.svg" width={437} />
         </div>
         <AccountSetupForm
           appHomePath={appHomePath}

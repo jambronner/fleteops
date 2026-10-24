@@ -1,5 +1,5 @@
 export const enDictionary = {
-  appName: "FleteOps AI",
+  appName: "FleteOps",
   nav: {
     home: "Dashboard",
     partners: "Directory",

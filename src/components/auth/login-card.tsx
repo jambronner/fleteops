@@ -55,7 +55,7 @@ export function LoginCard({ appHomePath, errorMessage, googleClientId, locale, s
       <section className="w-full max-w-[440px] rounded-[1.75rem] border border-surface-2 bg-card px-6 py-5 shadow-[0_24px_80px_rgba(1,26,98,0.12)] sm:px-8">
         <div className="flex flex-col items-center text-center">
           <Image
-            alt="FleteOps AI"
+            alt="FleteOps"
             className="h-9 w-auto object-contain"
             height={121}
             priority
